@@ -9,11 +9,6 @@ php:
 
 sudo: false
 
-script:
-  - ant phplint
-  - ant phpcs
-  - ant phpunit
-
 notifications:
     email:
         - gregor@klevze.com
