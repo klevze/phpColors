@@ -22,24 +22,31 @@ echo $c->bgCyan() . "TEST TEXT " . $c->reset() . "\t";
 echo $c->bgWhite() . "TEST TEXT " . $c->reset() . PHP_EOL;
 echo PHP_EOL;
 
-echo $c->red() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->green() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->yellow() . "TEST TEXT " . $c->reset() . PHP_EOL;
-echo $c->blue() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->cyan() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->magenta() . "TEST TEXT " . $c->reset() . PHP_EOL;
-echo $c->lightGray() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->darkGray() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->lightRed() . "TEST TEXT " . $c->reset() . PHP_EOL;
-echo $c->lightGreen() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->lightYellow() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->lightBlue() . "TEST TEXT " . $c->reset() . PHP_EOL;
-echo $c->magenta() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->cyan() . "TEST TEXT " . $c->reset() . "\t";
-echo $c->white() . "TEST TEXT " . $c->reset() . PHP_EOL;
-echo PHP_EOL;
+for ($i = 0; $i < 3; $i++) {
+	echo $c->red($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->green($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->yellow($i) . "TEST TEXT " . $c->reset() . PHP_EOL;
+	echo $c->blue($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->cyan($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->magenta($i) . "TEST TEXT " . $c->reset() . PHP_EOL;
+	echo $c->lightGray($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->darkGray($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->lightRed($i) . "TEST TEXT " . $c->reset() . PHP_EOL;
+	echo $c->lightGreen($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->lightYellow($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->lightBlue($i) . "TEST TEXT " . $c->reset() . PHP_EOL;
+	echo $c->magenta($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->cyan($i) . "TEST TEXT " . $c->reset() . "\t";
+	echo $c->white($i) . "TEST TEXT " . $c->reset() . PHP_EOL;
+	echo PHP_EOL;
+}
 
 echo $c->bold() . "TEST TEXT " . $c->reset() . "\t";
 echo $c->underline() . "TEST TEXT " . $c->reset() . "\t";
 echo $c->dim() . "TEST TEXT " . $c->reset() . PHP_EOL;
+echo $c->underline() . "TEST TEXT " . $c->italic() . "\t";
 echo $c->blink() . "TEST TEXT " . $c->reset() . PHP_EOL;
+
+for ($i = 0; $i < 256; $i+=16) {
+	echo "\033[38;2;250;0;" . $i . "m TEST TEXT\033[0m" . PHP_EOL;
+}

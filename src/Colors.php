@@ -9,11 +9,13 @@ class Colors
 	// SET STYLES
 	const BOLD = "1";
 	const DIM = "2";
+	const ITALIC = "3";
 	const UNDERLINE = "4";
-
 	const BLINK = "5";
+	const BLINK_FAST = "6";
 	const INVERTED = "7";
 	const HIDDEN = "8";
+	const STRIKETHROUGH = "9";
 
 	// RESET STYLES
 	const RESET = "0";
@@ -57,6 +59,16 @@ class Colors
 		return $this->build(self::UNDERLINE);
 	}
 
+	public function italic()
+	{
+		return $this->build(self::ITALIC);
+	}
+
+	public function strike()
+	{
+		return $this->build(self::STRIKETHROUGH);
+	}
+
 	public function blink()
 	{
 		return $this->build(self::BLINK);
@@ -78,84 +90,84 @@ class Colors
 	}
 
 
-	public function black() 
+	public function black($style = null) 
 	{
-		return $this->build($this->color['BLACK'][0]);
+		return $this->build($this->color['BLACK'][0], $style);
 	}
 
-	public function red() 
+	public function red($style = null) 
 	{
-		return $this->build($this->color['RED'][0]);
+		return $this->build($this->color['RED'][0], $style);
 	}
 
-	public function green() 
+	public function green($style = null) 
 	{
-		return $this->build($this->color['GREEN'][0]);
+		return $this->build($this->color['GREEN'][0], $style);
 	}
 
-	public function yellow() 
+	public function yellow($style = null) 
 	{
-		return $this->build($this->color['YELLOW'][0]);
+		return $this->build($this->color['YELLOW'][0], $style);
 	}
 
-	public function blue() 
+	public function blue($style = null) 
 	{
-		return $this->build($this->color['BLUE'][0]);
+		return $this->build($this->color['BLUE'][0], $style);
 	}
 
-	public function magenta() 
+	public function magenta($style = null) 
 	{
-		return $this->build($this->color['MAGENTA'][0]);
+		return $this->build($this->color['MAGENTA'][0], $style);
 	}
 
-	public function cyan() 
+	public function cyan($style = null) 
 	{
-		return $this->build($this->color['CYAN'][0]);
+		return $this->build($this->color['CYAN'][0], $style);
 	}
 
-	public function lightGray() 
+	public function lightGray($style = null) 
 	{
-		return $this->build($this->color['LIGHT_GRAY'][0]);
+		return $this->build($this->color['LIGHT_GRAY'][0], $style);
 	}
 
-	public function darkGray() 
+	public function darkGray($style = null) 
 	{
-		return $this->build($this->color['DARK_GRAY'][0]);
+		return $this->build($this->color['DARK_GRAY'][0], $style);
 	}
 
-	public function lightRed() 
+	public function lightRed($style = null) 
 	{
-		return $this->build($this->color['LIGHT_RED'][0]);
+		return $this->build($this->color['LIGHT_RED'][0], $style);
 	}
 
-	public function lightGreen() 
+	public function lightGreen($style = null) 
 	{
-		return $this->build($this->color['LIGHT_GREEN'][0]);
+		return $this->build($this->color['LIGHT_GREEN'][0], $style);
 	}
 
-	public function lightYellow() 
+	public function lightYellow($style = null) 
 	{
-		return $this->build($this->color['LIGHT_YELLOW'][0]);
+		return $this->build($this->color['LIGHT_YELLOW'][0], $style);
 	}
 
-	public function lightBlue() 
+	public function lightBlue($style = null) 
 	{
-		return $this->build($this->color['LIGHT_BLUE'][0]);
+		return $this->build($this->color['LIGHT_BLUE'][0], $style);
 	}
 
-	public function lightMagenta() 
+	public function lightMagenta($style = null) 
 	{
-		return $this->build($this->color['LIGHT_MAGENTA'][0]);
+		return $this->build($this->color['LIGHT_MAGENTA'][0], $style);
 	}
 
-	public function lightCyan() 
+	public function lightCyan($style = null) 
 	{
-		return $this->build($this->color['LIGHT_CYAN'][0]);
+		return $this->build($this->color['LIGHT_CYAN'][0], $style);
 	}
 
-	public function white() 
+	public function white($style = null) 
 	{
-		return $this->build($this->color['WHITE'][0]);
+		return $this->build($this->color['WHITE'][0], $style);
 	}
 
 	public function bgBlack() 
@@ -238,8 +250,15 @@ class Colors
 		return $this->build($this->color['WHITE'][1]);
 	}
 
-	private function build($color) {
-		return self::openEscapeCode . $color . self::closeEscapeCode;		
+	private function build($color, $style = null) {
+		$res = self::openEscapeCode;
+		if ($style != null) {
+			$res .= $style . ";"; 
+		}
+		$res .= $color;
+		$res .= self::closeEscapeCode;		
+		
+		return $res;
 	}
 
 }
