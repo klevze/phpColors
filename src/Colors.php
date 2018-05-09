@@ -1,5 +1,5 @@
 <?php 
-namespace klevze\phpCliColors;
+namespace Klevze\phpColors;
 
 class Colors
 {
@@ -21,7 +21,7 @@ class Colors
 	const RESET = "0";
 
 	// FOREGROUND & BACKGROUND COLORS
-	var $color = [
+	public $color = [
 		'BLACK' => [30, 40],
 		'RED' => [31, 41],
 		'GREEN' => [32, 42],
@@ -42,6 +42,23 @@ class Colors
 
 	function __construct()
 	{
+	}
+
+	/**
+	 * [build description]
+	 * @param  string $color [description]
+	 * @param  string $style [description]
+	 * @return string        [description]
+	 */
+	private function build($color, $style = null) {
+		$res = self::openEscapeCode;
+		if ($style !== null) {
+			$res .= $style . ";";
+		}
+		$res .= $color;
+		$res .= self::closeEscapeCode;		
+		
+		return $res;
 	}
 
 	public function bold()
@@ -88,7 +105,6 @@ class Colors
 	{
 		return $this->build(self::RESET);
 	}
-
 
 	public function black($style = null) 
 	{
@@ -250,16 +266,6 @@ class Colors
 		return $this->build($this->color['WHITE'][1]);
 	}
 
-	private function build($color, $style = null) {
-		$res = self::openEscapeCode;
-		if ($style != null) {
-			$res .= $style . ";"; 
-		}
-		$res .= $color;
-		$res .= self::closeEscapeCode;		
-		
-		return $res;
-	}
 
 }
 
