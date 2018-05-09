@@ -5,7 +5,6 @@ Adds colors to your console applications
 [View on Packagist](https://packagist.org/packages/klevze/phpcolors)
 
 
-
 ## Installation
 
 `composer require klevze/phpcolors`
