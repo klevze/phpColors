@@ -1,7 +1,6 @@
 <?php 
-
-include __DIR__ . "/src/Colors.php";
-use \klevze\phpCliColors\Colors;
+require __DIR__ . '/vendor/autoload.php';
+use \klevze\phpColors\Colors;
 
 $c = new Colors();
 
