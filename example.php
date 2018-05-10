@@ -2,6 +2,8 @@
 require __DIR__ . '/vendor/autoload.php';
 use \klevze\phpColors\Colors;
 
+$line = '';
+
 $c = new Colors();
 
 $line = $c->bgRed() . "TEST TEXT " . $c->reset() . "\t";
