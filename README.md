@@ -1,10 +1,17 @@
 # phpColors
 
+![phpColors demo](assets/example.png)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a77e6f0248e41fda03fe6e68dcb7e86)](https://www.codacy.com/app/klevze/phpColors?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=klevze/phpColors&amp;utm_campaign=Badge_Grade)
 
 Adds colors to your console applications
 
 [View on Packagist](https://packagist.org/packages/klevze/phpcolors)
+
+
+## Requirements
+
+- PHP 7.2 or newer (tested on 7.2–8.5)
 
 
 ## Installation
