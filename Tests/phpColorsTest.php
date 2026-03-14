@@ -5,15 +5,16 @@ class phpColorsTest extends TestCase
 {
 	private $colors;
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		$this->colors = new klevze\phpColors\Colors();
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 		$this->colors = null;
 	}
+
 
 	public function testAdd()
 	{

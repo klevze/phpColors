@@ -1,2 +1,26 @@
 /vendor/
 composer.lock
+
+# IDE/editor
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PHPUnit cache and build artifacts
+/.phpunit.result.cache
+/coverage/
+/build/
+
+# Logs and temp
+logs/
+*.log
+
+# Editor swap files
+*.swp
+*~
+
+# Example/demo outputs
+example-output.txt
