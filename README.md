@@ -4,6 +4,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a77e6f0248e41fda03fe6e68dcb7e86)](https://www.codacy.com/app/klevze/phpColors?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=klevze/phpColors&amp;utm_campaign=Badge_Grade)
 
+[![PHP Composer CI](https://github.com/klevze/phpColors/actions/workflows/php.yml/badge.svg?branch=master)](https://github.com/klevze/phpColors/actions/workflows/php.yml)
+
 Adds colors to your console applications
 
 [View on Packagist](https://packagist.org/packages/klevze/phpcolors)
