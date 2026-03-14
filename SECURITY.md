@@ -13,25 +13,18 @@ Use this section to tell people which versions receive security updates.
 
 ## Reporting a Vulnerability
 
-Please do NOT open public GitHub issues for security vulnerabilities. Report issues privately using one of the following methods:
+Do not open public GitHub issues for security vulnerabilities. Preferred reporting channel:
 
 - GitHub Security Advisories: https://github.com/klevze/phpColors/security/advisories (preferred)
-- Email: security@example.com (PGP encrypted — see key below)
+
+If you cannot use GitHub Security Advisories, contact the maintainers privately by opening a confidential communication channel (for example, an encrypted email). If you require an encrypted option, reply with your preferred contact details and PGP fingerprint and we will add them to this document.
 
 When reporting, please include:
 - Affected version(s)
 - A clear description of the issue and impact
-- Reproduction steps or proof-of-concept (if safe to share)
+- Reproduction steps or a proof-of-concept (if safe to share)
 - Any exploit code or test cases (if available)
 - Preferred disclosure and credit details
-
-## PGP Key
-
-If you prefer to encrypt your report, use our PGP key:
-
-- PGP key fingerprint: REPLACE-WITH-YOUR-PGP-FINGERPRINT
-
-Replace the fingerprint above with your project's actual key if you use encrypted reports.
 
 ## Response & Timeline
 
